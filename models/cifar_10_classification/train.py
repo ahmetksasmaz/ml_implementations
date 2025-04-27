@@ -152,18 +152,7 @@ if __name__ == "__main__":
     models = []
 
     if not test_only:
-        models.append(MNISTModel1().to(device))
-        models.append(MNISTModel2().to(device))
-        models.append(MNISTModel3().to(device))
-        models.append(MNISTModel4().to(device))
-        models.append(MNISTModel5().to(device))
-        models.append(MNISTModel6().to(device))
-        models.append(MNISTModel7().to(device))
-        models.append(MNISTModel8().to(device))
-        models.append(MNISTModel9().to(device))
-        models.append(MNISTModel10().to(device))
-        models.append(MNISTModel11().to(device))
-        models.append(MNISTModel12().to(device))
+        models.append(CIFARModel().to(device))
     else:
         base, ext = os.path.splitext(model_path)
         i = 0
@@ -173,29 +162,7 @@ if __name__ == "__main__":
                 break
             model = None
             if i == 0:
-                model = MNISTModel1().to(device)
-            elif i == 1:
-                model = MNISTModel2().to(device)
-            elif i == 2:
-                model = MNISTModel3().to(device)
-            elif i == 3:
-                model = MNISTModel4().to(device)
-            elif i == 4:
-                model = MNISTModel5().to(device)
-            elif i == 5:
-                model = MNISTModel6().to(device)
-            elif i == 6:
-                model = MNISTModel7().to(device)
-            elif i == 7:
-                model = MNISTModel8().to(device)
-            elif i == 8:
-                model = MNISTModel9().to(device)
-            elif i == 9:
-                model = MNISTModel10().to(device)
-            elif i == 10:
-                model = MNISTModel11().to(device)
-            elif i == 11:
-                model = MNISTModel12().to(device)
+                model = CIFARModel().to(device)
             else:
                 print(f"Model {i+1} not found.")
                 break
